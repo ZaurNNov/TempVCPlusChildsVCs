@@ -41,11 +41,11 @@ static NSString * const CellId = @"Cell";
     self.arrayImages = [self prepareImagesArray];
     // print - check
     NSLog(@"%@", self.arrayImages);
-    self.upperViewLabel.text = [NSString stringWithFormat:@"%d images", self.arrayImages.count];
+    self.upperViewLabel.text = [NSString stringWithFormat:@"%lu images", (unsigned long)self.arrayImages.count];
     
     self.imagesCollectionView.delegate = self;
     self.imagesCollectionView.dataSource = self;
-    [self.imagesCollectionView registerClass:[PhotoCollectionCell class] forCellWithReuseIdentifier:CellId];
+//    [self.imagesCollectionView registerClass:[PhotoCollectionCell class] forCellWithReuseIdentifier:CellId];
     
 }
 
