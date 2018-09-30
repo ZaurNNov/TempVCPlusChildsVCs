@@ -57,8 +57,8 @@ static NSString * const CellId = @"Cell";
         UIImage *img = [UIImage imageNamed:@"Z.png"];
         [fakeImages addObject:img];
     }
-    NSArray *images = [[NSArray alloc] initWithArray:fakeImages];
-    return images;
+    
+    return fakeImages.copy;
 }
 
 // MARK: - CollectionView methods
@@ -67,6 +67,7 @@ static NSString * const CellId = @"Cell";
     PhotoCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellId forIndexPath:indexPath];
     
     UIImage *image = self.arrayImages[indexPath.row];
+    
     cell.photoImageView.image = image;
     return cell;
 }

@@ -68,6 +68,9 @@
                                                     <constraint firstAttribute="bottom" secondItem="E0m-0C-JcE" secondAttribute="bottom" id="ljn-QT-VsI"/>
                                                     <constraint firstAttribute="trailing" secondItem="E0m-0C-JcE" secondAttribute="trailing" id="sOB-fy-fQC"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="photoImageView" destination="E0m-0C-JcE" id="qcG-EZ-cA0"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>

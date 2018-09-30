@@ -14,7 +14,6 @@
 		636A001A215FA3CF008886CE /* Slave2VC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636A000E215FA3CD008886CE /* Slave2VC.storyboard */; };
 		636A001B215FA3CF008886CE /* PhotoCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 636A000F215FA3CD008886CE /* PhotoCollectionCell.m */; };
 		636A001C215FA3CF008886CE /* Slave1VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 636A0010215FA3CE008886CE /* Slave1VC.m */; };
-		636A001D215FA3CF008886CE /* PhotoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 636A0011215FA3CE008886CE /* PhotoCollectionCell.xib */; };
 		636A001E215FA3CF008886CE /* DetailUserInfoMasterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 636A0012215FA3CE008886CE /* DetailUserInfoMasterVC.m */; };
 		636A001F215FA3CF008886CE /* Slave1VC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636A0014215FA3CE008886CE /* Slave1VC.storyboard */; };
 		636A0020215FA3CF008886CE /* DetailUserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636A0015215FA3CE008886CE /* DetailUserInfo.storyboard */; };
@@ -31,7 +30,6 @@
 		636A000E215FA3CD008886CE /* Slave2VC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Slave2VC.storyboard; sourceTree = "<group>"; };
 		636A000F215FA3CD008886CE /* PhotoCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionCell.m; sourceTree = "<group>"; };
 		636A0010215FA3CE008886CE /* Slave1VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Slave1VC.m; sourceTree = "<group>"; };
-		636A0011215FA3CE008886CE /* PhotoCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCollectionCell.xib; sourceTree = "<group>"; };
 		636A0012215FA3CE008886CE /* DetailUserInfoMasterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailUserInfoMasterVC.m; sourceTree = "<group>"; };
 		636A0013215FA3CE008886CE /* Slave1VC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Slave1VC.h; sourceTree = "<group>"; };
 		636A0014215FA3CE008886CE /* Slave1VC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Slave1VC.storyboard; sourceTree = "<group>"; };
@@ -83,7 +81,6 @@
 				636A0012215FA3CE008886CE /* DetailUserInfoMasterVC.m */,
 				636A0017215FA3CE008886CE /* PhotoCollectionCell.h */,
 				636A000F215FA3CD008886CE /* PhotoCollectionCell.m */,
-				636A0011215FA3CE008886CE /* PhotoCollectionCell.xib */,
 				636A0013215FA3CE008886CE /* Slave1VC.h */,
 				636A0010215FA3CE008886CE /* Slave1VC.m */,
 				636A0014215FA3CE008886CE /* Slave1VC.storyboard */,
@@ -161,7 +158,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				636A001A215FA3CF008886CE /* Slave2VC.storyboard in Resources */,
-				636A001D215FA3CF008886CE /* PhotoCollectionCell.xib in Resources */,
 				636A0020215FA3CF008886CE /* DetailUserInfo.storyboard in Resources */,
 				636A0005215FA3B0008886CE /* LaunchScreen.storyboard in Resources */,
 				636A0002215FA3B0008886CE /* Assets.xcassets in Resources */,
