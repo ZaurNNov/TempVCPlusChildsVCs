@@ -9,11 +9,14 @@
 #import "DetailUserInfoMasterVC.h"
 #import "Slave1VC.h"
 #import "Slave2VC.h"
+#import "Slave3VC.h"
 
 @interface DetailUserInfoMasterVC ()
 
 @property (weak, nonatomic) IBOutlet UIView *slave1View;
 @property (weak, nonatomic) IBOutlet UIView *slave2View;
+@property (weak, nonatomic) IBOutlet UIView *slave3View;
+
 
 @end
 
@@ -29,6 +32,7 @@
     // prepare
     [self addChildViewController:[self slave1VC]];
     [self addChildViewController:[self slave2VC]];
+    [self addChildViewController:[self slave3VC]];
 }
 
 // MARK: - Prepare Chid VC's
@@ -76,6 +80,30 @@
     
     // Notify ChildVC
     [vc didMoveToParentViewController:self];
+}
+
+// CollectionView as CollectionViewController
+-(void)addAsChildVCToSlave3View:(UIViewController *)vc {
+    // Add ChildVC
+    [self addChildViewController:vc];
+    
+    // Add ChildView as Subview
+    [self.slave3View addSubview:vc.view];
+    
+    // Configure ChildView
+    vc.view.frame = self.slave3View.bounds;
+    vc.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    // Notify ChildVC
+    [vc didMoveToParentViewController:self];
+}
+
+-(Slave3VC *)slave3VC {
+    UIStoryboard *st = [UIStoryboard storyboardWithName:@"Slave3VC" bundle: nil];
+    Slave3VC *vc = [st instantiateViewControllerWithIdentifier:@"Slave3VC"];
+    
+    [self addAsChildVCToSlave3View:vc];
+    return vc;
 }
 
 @end

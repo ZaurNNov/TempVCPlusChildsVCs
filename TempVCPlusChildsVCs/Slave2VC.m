@@ -9,21 +9,17 @@
 #import "Slave2VC.h"
 #import "PhotoCollectionCell.h"
 
-@interface Slave2VC () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface Slave2VC ()
 
 @property (weak, nonatomic) IBOutlet UIView *upperView;
-@property (weak, nonatomic) IBOutlet UIView *bottomView;
-@property (weak, nonatomic) IBOutlet UICollectionView *imagesCollectionView;
 @property (weak, nonatomic) IBOutlet UILabel *upperViewLabel;
+- (IBAction)buttonAction:(UIButton *)sender;
 
 @property (nonatomic) NSArray *arrayImages;
 
 @end
 
 @implementation Slave2VC
-
-int count = 10;
-static NSString * const CellId = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -33,48 +29,11 @@ static NSString * const CellId = @"Cell";
 
 -(void)setupView {
     // prepare view
-    [self fakeData];
+    self.upperViewLabel.text = @"Очень много фоток!";
 }
 
 
--(void)fakeData {
-    self.arrayImages = [self prepareImagesArray];
-    // print - check
-    NSLog(@"%@", self.arrayImages);
-    self.upperViewLabel.text = [NSString stringWithFormat:@"%lu images", (unsigned long)self.arrayImages.count];
-    
-    self.imagesCollectionView.delegate = self;
-    self.imagesCollectionView.dataSource = self;
-//    [self.imagesCollectionView registerClass:[PhotoCollectionCell class] forCellWithReuseIdentifier:CellId];
-    
+- (IBAction)buttonAction:(UIButton *)sender {
+    printf("Button pressed!");
 }
-
-- (NSArray *)prepareImagesArray {
-//    int count = 10;
-    NSMutableArray *fakeImages = [[NSMutableArray alloc] initWithCapacity:count];
-    
-    for (int i = 0; i < count; i++) {
-        UIImage *img = [UIImage imageNamed:@"Z.png"];
-        [fakeImages addObject:img];
-    }
-    
-    return fakeImages.copy;
-}
-
-// MARK: - CollectionView methods
-
-- (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    PhotoCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellId forIndexPath:indexPath];
-    
-    UIImage *image = self.arrayImages[indexPath.row];
-    
-    cell.photoImageView.image = image;
-    return cell;
-}
-
-- (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.arrayImages.count;
-}
-
-
 @end
